@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple calculator using HTML FORMS</title>
+    </head>
+    <body>
+        <form>
+           
+            <input type="text" name="number1" size="5">
+            <select name="opreter">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input type="text" name="number2" size="5">
+         
+            <input type="button" value="=" onclick= "pankaj('ok')">
+        </form>
+        <span id="result"></span>
+        <script>
+            let n1=document.querySelector("input[name=\"number1\"]");
+            let n2=document.querySelector("input[name=\"number2\"]");
+
+            let res=document.getElementById("result");
+            let op=document.querySelector('select[name="opreter"]');
+            console.log(op)
+           function pankaj(){
+
+                       var x=parseFloat(n1.value);
+                       var y=parseFloat(n2.value);
+
+
+                       console.log(op.value);
+
+                    /*
+                switch(expression) {
+                    case x:
+                        // code block
+                        break;
+                    case y:
+                        // code block
+                        break;
+                    default:
+                        // code block
+                    }
+                }
+                */
+
+                switch(op.value){
+
+                        case '+':
+                            console.log(x+y);
+                            res.innerHTML=x+y;
+                            break;
+                        case '-':
+                            console.log(x-y);
+                            res.innerHTML=x-y;
+                            break;
+                        case '*':
+                            console.log(x*y);
+                            res.innerHTML=x*y;
+                            break;
+                        case '/':
+                            console.log(x/y);
+                            res.innerHTML=x/y;
+                            break;
+
+                            
+                                
+
+                }
+                        }
+
+        </script>
+    </body>
+    </html>
